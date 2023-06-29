@@ -8,45 +8,104 @@
         <style>
             body{
                 margin: 0;
+                background-color: black;
             }
             a{
-                color: black;
+                color: white;
                 text-decoration: none;
                 font-family: 'Michroma', sans-serif;
                 height: auto;
+            }
+            a:hover{
+                color: black;
             }
 
             h1{
                 margin: 0;
                 text-align: center;
-                font-size: 4vw;
+                font-size: 2vw;
+                padding-bottom: 0.6vw;
+            }
+            h1:hover{
+                background-color: red;
             }
 
             h2{
                 margin: 0;
-                margin-bottom: 1vh;
-                font-size: 10vw;
-                margin-left: 2vw;
-                
+                padding-bottom: 1vh;
+                font-size: 7vw;
+                padding-left: 2vw;
+
             }
 
-            .PROTOTYPE{
-                font-size: 2vw;
+            h2:hover{
                 background-color: red;
-                color: white;
-   
             }
 
             p{
                 margin: 0;
                 margin-top: 1vh;
             }
+
+            /*PROTOTYPE!*/
+            .marquee {
+              height: 3vw;
+              width: 100vw;
+              border-bottom: 1px solid black;
+              border-top: 1px solid black;
+              padding-bottom: 0.2vw;
+
+              overflow: hidden;
+              position: relative;
+
+              background-color: red;
+            }
+
+
+            .marquee div {             
+              display: block;
+              width: 200%;
+              height: 3vw;
+
+              position: absolute;
+              overflow: hidden;
+
+              animation: marquee 5s linear infinite;
+            }
+
+            .marquee span {            
+              float: left;
+              width: 10%;
+              color: white;
+              font-family: 'Michroma', sans-serif;
+              font-size: 2vw;
+            }
+
+
+
+            @keyframes marquee {
+              0% { left: 0; }
+              100% { left: -100%; }
+            }
         </style>
 
     </head>
     <body>
         <h1><a href="index.html">Kim Yunu</a></h1>
-        <p><a class="PROTOTYPE">&nbsp;&nbsp;PROTOTYPE!&nbsp;&nbsp;&nbsp;PROTOTYPE!&nbsp;&nbsp;&nbsp;PROTOTYPE!&nbsp;&nbsp;&nbsp;PROTOTYPE!&nbsp;&nbsp;&nbsp;PROTOTYPE!&nbsp;</a></p>
+        <div class="marquee">
+            <div>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
+            </div>
+          </div>
         <h2><a href="Works.html">Works</a></h2>
         <h2><a href="Exhibitions.html">Exhibitions</a></h2>
         <h2><a href="Contact.html">Contact</a></h2>
