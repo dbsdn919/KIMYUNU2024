@@ -1,174 +1,47 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Kim Yunu</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kim&nbsp;Yunu</title>
 
-        <!--font-->
-        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Sans+KR&display=swap" rel="stylesheet">
-        <!--
-            font-family: 'Michroma', sans-serif;
-            font-family: 'Noto Sans KR', sans-serif;
-        -->
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
 
-        <style>
-            body{
-                margin: 0;
-                background-color: black;
-            }
-            a{
-                color: white;
-                text-decoration: none;
-                font-family: 'Michroma', sans-serif;
-                height: auto;
-            }
-            a:hover{
-                color: black;
-            }
-            .bonemoon_title:hover{
-                color: white;
-            }
-            .bonemoon_korean:hover{
-                color: white;
-            }
+    <!--JavaScript-->
+    <script src="main.js" defer></script>
 
-            .bonemoon:hover{
-                color: white;
-            }
+</head>
 
-            h1{
-                margin: 0;
-                text-align: center;
-                font-size: 2vw;
-                padding-bottom: 0.6vw;
-            }
-            h1:hover{
-                background-color: red;
-            }
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <a href="index.html">Kim&nbsp;Yunu</a>
+        </div>
 
-            h2{
-                margin: 0;
-                margin-bottom: 1vw;
-                padding-bottom: 0.8vh;
-                font-size: 2vw;
-                padding-left: 1vw;
+        <ul class="navbar_menu">
+            <li class="now_page"><a href="Works.html">Works</a></li>
+            <li><a href="Exhibitions.html">Exhibitions</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
 
-            }
+        <div class="navbar_toggleBtn">
+            <a href="#">✦</a>
+        </div>
+    </nav>
 
-            h2:hover{
-                background-color: red;
-            }
+    <ul class="Work_list">
+        <li><a href="Kangminje.html">Kangminje</a></li>
+    </ul>
 
-            h3{
-                text-align: center;
-                font-size: 3vw;
-                margin: 0;
+    
 
-            }
-
-            .bonemoon_title{
-                background-color: red;
-
-                padding-bottom: 0.5vw;
-                padding-left: 1vw;
-                padding-right: 1vw;
-            }
-
-            p{
-                text-align: center;
-                margin: 0;
-                margin-top: 2vw;
-            }
-
-            .bonemoon{
-                font-size: 2vw;
-            }
-            .bonemoon_korean{
-                font-family: 'Noto Sans KR', sans-serif;
-                font-size: 2vw;
-            }
-
-            li{
-
-                list-style-type: none;
-            }
-
-            .list{
-                font-size: 4vw;
-                font-weight: 900;
-                padding-left: 3vw;
-            }
-            .list:hover{
-                color: grey;
-            }
-            /*PROTOTYPE!*/
-            .marquee {
-              height: 3vw;
-              width: 100vw;
-              border-bottom: 1px solid red;
-              border-top: 1px solid red;
-              padding-bottom: 0.2vw;
-
-              overflow: hidden;
-              position: relative;
-
-              
-            }
-
-
-            .marquee div {             
-              display: block;
-              width: 200%;
-              height: 3vw;
-
-              position: absolute;
-              overflow: hidden;
-
-              animation: marquee 5s linear infinite;
-            }
-
-            .marquee span {            
-              float: left;
-              width: 10%;
-              color: red;
-              font-family: 'Michroma', sans-serif;
-              font-size: 2vw;
-            }
-
-
-
-            @keyframes marquee {
-              0% { left: 0; }
-              100% { left: -100%; }
-            }
-
-
-            
-        </style>
-
-    </head>
-    <body>
-        <h1><a href="index.html">Kim Yunu</a></h1>
-        <div class="marquee">
-            <div>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-              <a href="PROTOTYPE!.html"><span>PROTOTYPE!</span></a>
-            </div>
-          </div>
-        <h2><a href="index.html">&lt;&nbsp;Back</a></h2>
-
-        <li><a href="Kangminje.html" class="list">Kang Minje</a></li>
-        
-    </body>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous">
+    </script>
+    
+</body>
 </html>

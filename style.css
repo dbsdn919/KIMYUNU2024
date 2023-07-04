@@ -1,0 +1,461 @@
+
+@font-face {
+    font-family: 'Panchang-Variable';
+    src: url('srcs/fonts/Panchang/Panchang-Variable.woff2') format('woff2'),
+         url('srcs/fonts/Panchang/Panchang-Variable.woff') format('woff'),
+         url('srcs/fonts/Panchang/Panchang-Variable.ttf') format('truetype');
+         font-weight: 200 800;
+         font-display: swap;
+         font-style: normal;
+  }
+
+
+/*SpoqaHanSansNeo*/
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+/*
+font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+*/
+
+/*Nanum Myeongjo*/
+/*
+font-family: 'Nanum Myeongjo', serif;
+*/
+
+:root{
+    --text-color: #0D0D0D;
+    --background-color: #F2F2F2;
+    --point-color : #eb5e28;
+    --select-color : grey;
+}
+
+@media (prefers-color-scheme : dark) {
+    :root {
+        --text-color: #F2F2F2;
+        --background-color: #0D0D0D;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    -webkit-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: var(--background-color);
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    height: auto;
+    width: 100vw;
+    border-bottom: 1px solid var(--text-color);
+}
+.navbar_logo a {
+    font-family: 'Panchang-Variable';
+    font-weight: 600;
+    font-size: 28px;
+    padding-left: 8px;
+    
+}
+
+.navbar_menu {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar_menu a {
+    font-family: 'Panchang-Variable';
+    padding: 9px 10px;
+}
+.navbar_menu li :hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    
+}
+
+.now_page a {
+    background-color: var(--point-color) !important;
+    color: var(--background-color) !important;
+}
+
+.navbar_menu li {
+    list-style: none;
+    float: left;
+    border-left: 1px solid var(--select-color);
+}
+
+.navbar_toggleBtn a {
+    padding: 10px;
+    margin: 0 3px;
+    pointer-events: none;
+}
+
+/*navbar grid 순서 변경*/
+.navbar_logo:nth-child(1) {
+    order: 1;
+}
+
+.navbar_menu:nth-child(2) {
+    order: 3;
+}
+
+.navbar_toggleBtn:nth-child(3) {
+    order: 2;
+}
+
+
+@media screen and (max-width:768px) {
+    .navbar_logo:nth-child(1) {
+        order: 1;
+    }
+    
+    .navbar_menu:nth-child(2) {
+        order: 2;
+    }
+    
+    .navbar_toggleBtn:nth-child(3) {
+        order: 3;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        text-align: end;
+        width: 100%;
+    }
+
+    .navbar_menu li{
+        width: 100%;
+        padding: 3vh 0 ;
+        float: inline-start;
+        border-bottom: 1px solid var(--select-color);
+        border-left: 0px solid var(--select-color);
+    }
+
+    .now_page {
+        background-color: var(--point-color) !important;
+        color: var(--background-color) !important;
+    }
+
+    .navbar_menu li :hover {
+        background-color: var(--background-color);
+        color: var(--point-color);
+    }
+
+    .navbar_menu a {
+        font-size: 8vw;
+        padding: 0;
+        padding-right: 15px;
+    }
+
+    .navbar_toggleBtn{
+        position: fixed;
+        top: 10px;
+        right: 4px;
+        transform: rotate(-90deg);
+        transition: all 0.3s linear;
+        pointer-events: auto;
+    }
+
+    .navbar_logo.active{
+        padding-right: 70vw;
+        border-bottom: 1px solid var(--text-color);
+    }
+
+    .navbar_menu.active{
+        display: flex;
+    }
+
+    .navbar_toggleBtn a {
+        margin: 0;
+    }
+
+    .navbar_toggleBtn.active {
+        transform: rotate(90deg);
+        transition: all 0.3s linear;
+    }
+
+    .navbar.active {
+        border: 0px;
+    }
+}
+
+/*Works*/
+
+.Work_list {
+    position: absolute;
+
+    margin: 0;
+    margin-top: 36px;
+    
+    padding: 0;
+    font-family: 'Panchang-Variable';
+    font-size: 4vw;
+}
+
+.Work_list a {
+    display: block;
+    margin-top: 0vw;
+    margin-left: 10vw;
+    margin-top: 38vh;
+    text-align: end;
+    font-weight: 500;
+}
+
+.Work_list li :hover {
+    color: var(--point-color);
+}
+
+@media screen and (max-width:768px) {
+    .Work_list {
+        font-size: 7vw;
+    }
+}
+
+/*Contact*/
+
+.contact {
+    position: absolute;
+
+    margin-top: 42vh;
+    margin-left: 10vw;
+
+    font-family: 'Panchang-Variable';
+    font-size: 2vw;
+}
+
+.contact_mail {
+    margin-bottom: 8px;
+}
+
+.contact_mail a {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-weight: 500;
+
+    padding: 0 5px;
+}
+
+.contact_mail_adress :hover{
+    color: var(--point-color);
+}
+
+.contact_instagram {
+    margin-top: 5vh;
+    margin-bottom: 8px;
+}
+
+.contact_instagram a {
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-weight: 500;
+
+    padding: 0 5px;
+}
+
+.contact_instagram_adress :hover {
+    color: var(--point-color);
+}
+
+@media screen and (max-width:768px) {
+    .contact {       
+        font-size: 4vw;
+    }
+
+    .contact_mail {
+        margin-bottom: 4px;
+    }
+
+    .contact_instagram {
+        margin-top: 4vh;
+        margin-bottom: 4px;
+    }
+}
+
+/*Kangminje*/
+.Kangminje {
+    margin-top: 36px;
+
+    position: absolute;
+    font-family: 'Nanum Myeongjo', serif;
+
+    width: 100vw;
+}
+
+.Kangminje_title {
+    font-size: 30pt;
+    font-weight: 500;
+
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.Kangminje_subtitle {
+    font-size: 20pt;
+
+    margin-top: 15px;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: 7px;
+}
+
+.Kangminje_subtitle a {
+    display: block;
+    text-align: end;
+}
+
+.Kangminje_Following div {
+    text-align: center;
+}
+
+.Kangminje_Dormitory div {
+    text-align: center;
+}
+
+.Kangminje_Filming div {
+    text-align: center;
+}
+
+.Kangminje_Studio div {
+    text-align: center;
+}
+
+.img_vertical img {
+    height: 70vh;
+    margin: 10vh 0;
+}
+
+.img_horizontal img {
+    height: 70vh;
+    margin: 15vh 0;
+}
+
+.img_triptychs img {
+    width: 25vw;
+    margin: 0 2vw;
+}
+
+.img_triptychs {
+    display: inline-block;
+}
+
+.img_diptychs img {
+    width: 40vw;
+    margin: 0 2vw;
+}
+
+.img_diptychs {
+    display: inline-block;
+}
+
+.end_logo {
+    font-family: 'Panchang-Variable';
+    text-align: center;
+    position: relative;
+
+    margin: 10vh 0;
+}
+
+.end_logo a {
+    font-size: 1vw;
+    font-weight: 600;
+}
+
+.bottom {
+    height: 1px;
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .Kangminje_title {
+        font-size: 8vw;
+        font-weight: 500;
+    
+        margin-top: 50px;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .Kangminje_title a {
+        display: block;
+    }
+
+    .Kangminje_subtitle {
+        font-size: 5vw;
+    
+        margin-top: 30px;
+        margin-right: 5vw;
+        margin-left: 5vw;
+    
+        border-bottom: 1px solid var(--text-color);
+        padding-bottom: 7px;
+    }
+
+    .img_vertical img {
+        width: 70vw;
+        height: auto;
+        margin:  15vh 0;
+    }
+    
+    .img_horizontal img {
+        width: 90vw;
+        height: auto;
+        margin: 20vh 0;
+    }
+    
+    .img_triptychs img {
+        width: 90vw;
+        margin: 2vw 0 ;
+    }
+    
+    .img_triptychs {
+        display: block;
+    }
+    
+    .img_diptychs img {
+        width: 90vw;
+        margin: 2vw 0 ;
+    }
+    
+    .img_diptychs {
+        display: block;
+    }
+
+    .end_logo {
+        margin: 10vh 0;
+    }
+    
+    .end_logo a {
+        font-size: 4vw;
+        font-weight: 600;
+    }
+}
+
