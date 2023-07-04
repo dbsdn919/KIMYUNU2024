@@ -232,6 +232,10 @@ a {
     color: var(--point-color);
 }
 
+.Work_list li {
+    list-style: none;
+}
+
 @media screen and (max-width:768px) {
     .Work_list {
         font-size: 7vw;
