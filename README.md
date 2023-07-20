@@ -1,2 +1,2 @@
 # kimyunu.com
-Kim Yunu's Portfolio web site
+Kim Yunu's Cyberspace {studio, lab}
