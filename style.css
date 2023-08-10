@@ -42,7 +42,7 @@ html {
 body {
     margin: 0;
     background-color: var(--background-color);
-    height: 100vh;
+    
     overflow-x: hidden;
     overflow-y: auto;
 
@@ -56,6 +56,14 @@ a {
     text-decoration: none;
     color: var(--text-color);
     
+}
+
+del {
+    color: var(--select-color) !important;
+}
+
+li {
+    list-style: none;
 }
 
 .navbar{
@@ -75,7 +83,6 @@ a {
     font-weight: 600;
     font-size: 28px;
     padding-left: 8px;
-    
 }
 
 .navbar_menu {
@@ -99,7 +106,6 @@ a {
 }
 
 .navbar_menu li {
-    list-style: none;
     float: left;
     border-left: 1px solid var(--select-color);
 }
@@ -148,6 +154,7 @@ a {
         flex-direction: column;
         text-align: end;
         width: 100%;
+        font-weight: 500;
     }
 
     .navbar_menu li{
@@ -171,7 +178,7 @@ a {
     .navbar_menu a {
         font-size: 8vw;
         padding: 0;
-        padding-right: 15px;
+        padding-right: 5vw;
     }
 
     .navbar_toggleBtn{
@@ -206,13 +213,19 @@ a {
     }
 }
 
+.void {
+    margin-top: 100vh;
+}
+
+
 /*Works*/
 
 .Work_list {
     position: absolute;
 
     margin: 0;
-    margin-top: 36px;
+    margin-top: 40vh;
+    margin-left: 10vw;
     
     padding: 0;
     font-family: 'Panchang-Variable';
@@ -222,9 +235,8 @@ a {
 .Work_list a {
     display: block;
     margin-top: 0vw;
-    margin-left: 10vw;
-    margin-top: 38vh;
-    text-align: end;
+    margin-bottom: 5vh;
+    
     font-weight: 500;
 }
 
@@ -232,14 +244,28 @@ a {
     color: var(--point-color);
 }
 
-.Work_list li {
-    list-style: none;
-}
-
 @media screen and (max-width:768px) {
     .Work_list {
         font-size: 7vw;
+        text-align: end;
     }
+}
+
+/*Design*/
+
+.Design_font {
+    margin-top: 36px;
+}
+
+.Design_font div {
+    font-family: 'Panchang-Variable';
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.Design_font li {
+    text-align: end;
+    font-size: 40px;
 }
 
 /*Contact*/
@@ -247,7 +273,7 @@ a {
 .contact {
     position: absolute;
 
-    margin-top: 42vh;
+    margin-top: 40vh;
     margin-left: 10vw;
 
     font-family: 'Panchang-Variable';
@@ -314,7 +340,7 @@ a {
 
 .Kangminje_title {
     font-size: 30pt;
-    font-weight: 500;
+    font-weight: 700;
 
     margin-top: 50px;
     margin-left: 50px;
@@ -363,8 +389,8 @@ a {
 }
 
 .img_triptychs img {
-    width: 25vw;
-    margin: 0 2vw;
+    width: 30vw;
+    margin: 0 1vw;
 }
 
 .img_triptychs {
@@ -385,11 +411,12 @@ a {
     text-align: center;
     position: relative;
 
-    margin: 10vh 0;
+    margin: 0;
+    margin-bottom: 5vh;
 }
 
 .end_logo a {
-    font-size: 1vw;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -403,7 +430,7 @@ a {
         font-size: 8vw;
         font-weight: 500;
     
-        margin-top: 50px;
+        margin-top: 100px;
         margin-left: 0px;
         text-align: center;
     }
@@ -415,7 +442,7 @@ a {
     .Kangminje_subtitle {
         font-size: 5vw;
     
-        margin-top: 30px;
+        margin-top: 15px;
         margin-right: 5vw;
         margin-left: 5vw;
     
