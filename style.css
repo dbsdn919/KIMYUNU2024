@@ -519,10 +519,22 @@ li {
     text-align: center;
 }
 
+.video_square {
+    margin: 100px 0;
+}
+
+.video_square video {
+    height: 50vh;
+}
+
 @media screen and (max-width:768px) {
     .BYREDO_title {
         font-size: 8vw;
         text-align: center;
         margin-left: 0;
+    }
+
+    .video_square video {
+        width: 70vw;
     }
 }
