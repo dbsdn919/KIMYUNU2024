@@ -165,10 +165,15 @@ li {
     display: none;
 }
 
+/* iOS only */
+@supports (-webkit-touch-callout: none) { 
+    height: -webkit-fill-available;
+}
 
 /*--------------Media Query--------------*/
 
 @media screen and (max-width:768px) {
+    
 
     .index {
         display: flex;
