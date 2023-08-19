@@ -22,3 +22,11 @@ document.addEventListener('mousemove', (e) =>{
     cursor.style.left = e.pageX + 'px';
     cursor.style.top = e.pageY + 'px';
 })
+
+/*vh error*/
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', vh + 'px');
+window.addEventListener('resize',function () {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh + 'px');
+});
