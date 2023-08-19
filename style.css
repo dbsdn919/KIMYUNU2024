@@ -112,7 +112,7 @@ li {
     .index_video_light {
         display: none;
     }
-
+s
     .index_video_dark {
         display: block;
     }
@@ -215,7 +215,7 @@ li {
     
     .index_timer {
         font-size: 9vw;
-        margin-bottom: 10vw;
+        margin-bottom: 5vw;
     }
     
     .index_end_logo {
