@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="style.css">
 
     <!--JavaScript-->
-    <script src="main.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2B0KCVT3JH"></script>
@@ -43,37 +46,34 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar_logo">
-            <a href="index.html">Kim&nbsp;Yunu</a>
+    <div id="mouse_pointer"></div>
+
+    <div class="index">
+        <div class="index_text_portrait"><a>Until&nbsp;the&nbsp;reveal,</a></div>
+
+        <div class="index_video_light"><video src="src/index/video/index_video_light.mov" autoplay loop poster="src/index/video/index_video_poster.PNG"></video></div>
+        <div class="index_video_dark"><video src="src/index/video/index_video_dark.mov" autoplay loop poster="src/index/video/index_video_poster.PNG"></video></div>
+
+        <div class="index_text_container">
+            <div class="index_text"><a>Until&nbsp;the&nbsp;reveal,</a></div>
+            <div class="index_timer">
+                <a id="days">00</a><a>D</a>
+                <a id="hours">00</a><a>h</a>
+                <a id="minutes">00</a><a>m</a>
+                <a id="seconds">00</a><a>s</a>
+                <a>left.</a>
+            </div>
+            <div class="index_end_logo">
+                <div class="index_end_logo_icon"><a>✦</a></div>
+                <div class="index_end_logo_text"><a href="https://www.instagram.com/kim.yunu/">Kim&nbsp;Yunu</a></div>
+            </div>
         </div>
 
-        <ul class="navbar_menu">
-            <li><a href="Works.html">Works</a></li>
-            <li><a><del>Exhibitions</del></a></li>
-            <li><a><del>Design</del></a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-
-        <div class="navbar_toggleBtn">
-            <a href="#">✦</a>
+        <div class="index_end_logo_portrait">
+            <div class="index_end_logo_icon"><a>✦</a></div>
+            <div class="index_end_logo_text"><a href="https://www.instagram.com/kim.yunu/">Kim&nbsp;Yunu</a></div>
         </div>
-    </nav>
-
-
-    <div class="void"><a></a></div>
-
-
-    <div class="end_logo">
-        <div><a>✦</a></div>
-        <div><a href="index.html">Kim&nbsp;Yunu</a></div>
     </div>
 
-    <!--jQuery-->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-    crossorigin="anonymous">
-    </script>
-    
 </body>
 </html>

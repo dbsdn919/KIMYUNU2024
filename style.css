@@ -1,42 +1,27 @@
-@font-face {
-    font-family: 'Panchang-Variable';
-    src: url('srcs/fonts/Panchang/Panchang-Variable.woff2') format('woff2'),
-         url('srcs/fonts/Panchang/Panchang-Variable.woff') format('woff'),
-         url('srcs/fonts/Panchang/Panchang-Variable.ttf') format('truetype');
-         font-weight: 200 800;
-         font-display: swap;
-         font-style: normal;
-  }
 
 @font-face {
-    font-family: 'BYREDO-Sans';
-    src: url('srcs/fonts/BYREDO/byredosans-regular-webfont.woff2') format('woff2'),
-         url('srcs/fonts/BYREDO/byredosans-regular-webfont.woff') format('woff'),
-         url('srcs/fonts/BYREDO/byredosans-regular-webfont.ttf') format('truetype');
+    font-family: 'Maigre';
+    src: url('src/font/maigre/Maigre.woff2') format('woff2'),
+         url('src/font/maigre/Maigre.woff') format('woff'),
+         url('src/font/maigre/Maigre.ttf') format('truetype');
 }
 
-/*SpoqaHanSansNeo*/
-@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
-/*
-font-family: 'Spoqa Han Sans Neo', 'sans-serif';
-*/
-
-/*Nanum Myeongjo*/
-/*
-font-family: 'Nanum Myeongjo', serif;
-*/
+/*--Color--*/
 
 :root{
-    --text-color: #0D0D0D;
+    --text-color: #0d0d0d;
     --background-color: #F2F2F2;
-    --point-color : #eb5e28;
+    --point-color : #1a95c5;
     --select-color : grey;
 }
+
+/*--Dark Mode--*/
 
 @media (prefers-color-scheme : dark) {
     :root {
         --text-color: #F2F2F2;
-        --background-color: #0D0D0D;
+        --background-color: #0d0d0d;
+        --point-color: #3feb28;
     }
 }
 
@@ -60,481 +45,186 @@ body {
 a {
     text-decoration: none;
     color: var(--text-color);
-    
-}
-
-del {
-    color: var(--select-color) !important;
 }
 
 li {
     list-style: none;
 }
 
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    background-color: var(--background-color);
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    height: auto;
-    width: 100vw;
-    border-bottom: 1px solid var(--text-color);
-}
-.navbar_logo a {
-    font-family: 'Panchang-Variable';
-    font-weight: 600;
-    font-size: 28px;
-    padding-left: 8px;
-}
+/*--mouse_pointer--*/
 
-.navbar_menu {
-    margin: 0;
-    padding: 0;
-}
+@media (hover: hover) {
 
-.navbar_menu a {
-    font-family: 'Panchang-Variable';
-    padding: 9px 10px;
-}
-.navbar_menu li :hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
-    
-}
-
-.now_page a {
-    background-color: var(--point-color) !important;
-    color: var(--background-color) !important;
-}
-
-.navbar_menu li {
-    float: left;
-    border-left: 1px solid var(--select-color);
-}
-
-.navbar_toggleBtn a {
-    padding: 10px;
-    margin: 0 3px;
-    pointer-events: none;
-}
-
-/*navbar grid 순서 변경*/
-.navbar_logo:nth-child(1) {
-    order: 1;
-}
-
-.navbar_menu:nth-child(2) {
-    order: 3;
-}
-
-.navbar_toggleBtn:nth-child(3) {
-    order: 2;
-}
-
-
-@media screen and (max-width:768px) {
-    .navbar_logo:nth-child(1) {
-        order: 1;
-    }
-    
-    .navbar_menu:nth-child(2) {
-        order: 2;
-    }
-    
-    .navbar_toggleBtn:nth-child(3) {
-        order: 3;
+    html {
+        cursor: none;
     }
 
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
+    a {
+        cursor: none;
     }
 
-    .navbar_menu{
-        display: none;
-        flex-direction: column;
-        text-align: end;
-        width: 100%;
-        font-weight: 500;
-    }
-
-    .navbar_menu li{
-        width: 100%;
-        padding: 3vh 0 ;
-        float: inline-start;
-        border-bottom: 1px solid var(--select-color);
-        border-left: 0px solid var(--select-color);
-    }
-
-    .now_page {
-        background-color: var(--point-color) !important;
-        color: var(--background-color) !important;
-    }
-
-    .navbar_menu li :hover {
-        background-color: var(--background-color);
-        color: var(--point-color);
-    }
-
-    .navbar_menu a {
-        font-size: 8vw;
-        padding: 0;
-        padding-right: 5vw;
-    }
-
-    .navbar_toggleBtn{
+    #mouse_pointer {
         position: fixed;
-        top: 10px;
-        right: 4px;
-        transform: rotate(-90deg);
-        transition: all 0.3s linear;
-        pointer-events: auto;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--point-color);
+        transition: 0.1s;
+        transform: translate(-50%, -50%);
+        filter: blur(5px);
+        mix-blend-mode: difference;
+        pointer-events: none;
+    }
+}
+
+@media (hover: none) {
+    #mouse_pointer {
+        display: none;
+    }
+}
+
+/*--index--*/
+
+.index {
+    display: grid;
+
+    grid-template-columns: 50vw 50vw;
+}
+
+.index_video_light {
+    height: 100vh;
+    line-height: 100vh;
+}
+
+.index_video_dark {
+    height: 100vh;
+    line-height: 100vh;
+    display: none;
+}
+
+/*--index video dark mode--*/
+
+@media (prefers-color-scheme : dark) {
+    .index_video_light {
+        display: none;
     }
 
-    .navbar_logo.active{
-        padding-right: 100vw;
-        border-bottom: 1px solid var(--text-color);
+    .index_video_dark {
+        display: block;
     }
+}
 
-    .navbar_menu.active{
+.index video {
+    width: 20vw;
+    padding: 15vh 15vw;
+    border-right: 1px solid var(--text-color); 
+    vertical-align: middle;
+}
+
+.index_text_container {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 20vh;
+    align-content: center;
+    font-family: 'Maigre';
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.index_text {
+    font-size: 2.5vw;
+}
+
+.index_timer {
+    font-size: 3vw;
+}
+
+.index_end_logo {
+    font-size: 1.2vw;
+}
+
+.index_end_logo_icon {
+    margin-bottom: 0.5vh;
+    font-size: 1vw;
+}
+
+.index_end_logo_text :hover {
+    color: var(--point-color);
+}
+
+
+/*--Media Query--*/
+
+@media screen and (max-width:768px) {
+    .index {
         display: flex;
-    }
-
-    .navbar_toggleBtn a {
-        margin: 0;
-    }
-
-    .navbar_toggleBtn.active {
-        transform: rotate(90deg);
-        transition: all 0.3s linear;
-    }
-
-    .navbar.active {
-        border: 0px;
-    }
-}
-
-.void {
-    margin-top: 100vh;
-}
-
-
-/*Works*/
-
-.Work_list {
-    position: absolute;
-
-    margin: 0;
-    margin-top: 37vh;
-    margin-left: 10vw;
-    
-    padding: 0;
-    font-family: 'Panchang-Variable';
-    font-size: 4vw;
-}
-
-.Work_list a {
-    display: block;
-    margin-top: 0vw;
-    margin-bottom: 5vh;
-    
-    font-weight: 500;
-}
-
-.Work_list li :hover {
-    color: var(--point-color);
-}
-
-@media screen and (max-width:768px) {
-    .Work_list {
-        font-size: 7vw;
-        text-align: end;
-    }
-}
-
-/*Design*/
-
-.Design_font {
-    margin-top: 36px;
-}
-
-.Design_font div {
-    font-family: 'Panchang-Variable';
-    font-size: 40px;
-    font-weight: 500;
-}
-
-.Design_font li {
-    text-align: end;
-    font-size: 40px;
-}
-
-/*Contact*/
-
-.contact {
-    position: absolute;
-
-    margin-top: 40vh;
-    margin-left: 10vw;
-
-    font-family: 'Panchang-Variable';
-    font-size: 2vw;
-}
-
-.contact_mail {
-    margin-bottom: 8px;
-}
-
-.contact_mail a {
-    background-color: var(--text-color);
-    color: var(--background-color);
-    font-weight: 500;
-
-    padding: 0 5px;
-}
-
-.contact_mail_adress :hover{
-    color: var(--point-color);
-}
-
-.contact_instagram {
-    margin-top: 5vh;
-    margin-bottom: 8px;
-}
-
-.contact_instagram a {
-    background-color: var(--text-color);
-    color: var(--background-color);
-    font-weight: 500;
-
-    padding: 0 5px;
-}
-
-.contact_instagram_adress :hover {
-    color: var(--point-color);
-}
-
-@media screen and (max-width:768px) {
-    .contact {       
-        font-size: 4vw;
-    }
-
-    .contact_mail {
-        margin-bottom: 4px;
-    }
-
-    .contact_instagram {
-        margin-top: 4vh;
-        margin-bottom: 4px;
-    }
-}
-
-/*Kangminje*/
-.Kangminje {
-    margin-top: 36px;
-
-    position: absolute;
-    font-family: 'Nanum Myeongjo', serif;
-
-    width: 100vw;
-}
-
-.Kangminje_title {
-    font-size: 30pt;
-    font-weight: 500;
-
-    margin-top: 50px;
-    margin-left: 50px;
-}
-
-.Kangminje_subtitle {
-    font-size: 20pt;
-
-    margin-top: 15px;
-    margin-right: 50px;
-    margin-left: 50px;
-
-    border-bottom: 1px solid var(--text-color);
-    padding-bottom: 7px;
-}
-
-.Kangminje_subtitle a {
-    display: block;
-    text-align: end;
-}
-
-.Kangminje_Following div {
-    text-align: center;
-}
-
-.Kangminje_Dormitory div {
-    text-align: center;
-}
-
-.Kangminje_Filming div {
-    text-align: center;
-}
-
-.Kangminje_Studio div {
-    text-align: center;
-}
-
-.img_vertical img {
-    height: 70vh;
-    margin: 10vh 0;
-}
-
-.img_horizontal img {
-    height: 70vh;
-    margin: 15vh 0;
-}
-
-.img_triptychs img {
-    width: 30vw;
-    margin: 0 1vw;
-}
-
-.img_triptychs {
-    display: inline-block;
-}
-
-.img_diptychs img {
-    width: 40vw;
-    margin: 0 2vw;
-}
-
-.img_diptychs {
-    display: inline-block;
-}
-
-.end_logo {
-    font-family: 'Panchang-Variable';
-    text-align: center;
-      
-
-    margin: 0;
-    margin-bottom: 5vh;
-}
-
-.end_logo a {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.bottom {
-    height: 1px;
-    width: 100%;
-}
-
-@media screen and (max-width:768px) {
-    .Kangminje_title {
-        font-size: 8vw;
-        font-weight: 500;
-    
-        margin-top: 70px;
-        margin-left: 0px;
+        flex-direction: column;
         text-align: center;
+        justify-content: center;
+        font-family: 'Maigre';
+        height: 100vh;
     }
 
-    .Kangminje_title a {
-        display: block;
+    .index_video_light {
+        height: 40vh;
+        line-height: 40vh;
     }
-
-    .Kangminje_subtitle {
-        font-size: 5vw;
     
-        margin-top: 15px;
-        margin-right: 5vw;
-        margin-left: 5vw;
-    
-        border-bottom: 1px solid var(--text-color);
-        padding-bottom: 7px;
+    .index_video_dark {
+        height: 40vh;
+        line-height: 40vh;
     }
 
-    .img_vertical img {
+    .index video {
         width: 70vw;
-        height: auto;
-        margin:  15vh 0;
-    }
+        
+        padding: 0;
+        border-right: 0px solid var(--text-color); 
     
-    .img_horizontal img {
-        width: 90vw;
-        height: auto;
-        margin: 20vh 0;
+        vertical-align: auto;
     }
-    
-    .img_triptychs img {
-        width: 90vw;
-        margin: 2vw 0 ;
-    }
-    
-    .img_triptychs {
+
+    .index_text_container {
         display: block;
-    }
-    
-    .img_diptychs img {
-        width: 90vw;
-        margin: 2vw 0 ;
-    }
-    
-    .img_diptychs {
-        display: block;
-    }
-
-    .end_logo {
-        margin: 10vh 0;
-    }
-    
-    .end_logo a {
-        font-size: 4vw;
-        font-weight: 600;
-    }
-}
-
-/*BYREDO*/
-.BYREDO {
-    margin-top: 36px;
-    width: 100vw;
-
-    position: absolute;
-}
-
-.BYREDO_title {
-    margin-top: 50px;
-    margin-left: 50px;
-    font-size: 4vw;
-    font-family: 'BYREDO-Sans';
-    
-}
-
-.BYREDO_title a {
-    display: block ;
-}
-
-.BYREDO_PERFUME div {
-    text-align: center;
-}
-
-.video_square {
-    margin: 100px 0;
-}
-
-.video_square video {
-    height: 50vh;
-}
-
-@media screen and (max-width:768px) {
-    .BYREDO_title {
-        font-size: 8vw;
+        grid-template-rows: auto;
+        gap: 0vh;
+        align-content: center;
+        font-family: 'Maigre';
         text-align: center;
-        margin-left: 0;
+        height: auto;
+        align-items: center;
     }
 
-    .video_square video {
-        width: 70vw;
+    .index_text {
+        display: none;
+    }
+    
+    .index_text_portrait {
+        font-size: 10vw;
+    }
+    
+    .index_timer {
+        font-size: 9vw;
+    }
+    
+    .index_end_logo {
+        display: none;
+    }
+    
+    .index_end_logo_portrait {
+        position: fixed;
+        bottom: 10vh;
+        width: 100%;
+        
+    }
+    
+    .index_end_logo_icon {
+        font-size: 3vw;
+        margin-bottom: 0.5vh;
+    }
+    
+    .index_end_logo_text {
+        font-size: 4vw;
     }
 }
