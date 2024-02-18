@@ -96,7 +96,15 @@ ul {
     color: darkgray;
     word-spacing: -2px;
     position: fixed;
-    bottom: 12px;
+    bottom: 11px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .copyright a {
+    right: 11px;
+    left: auto;
+    transform: translateX(0%);
+    }
 }
