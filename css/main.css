@@ -33,7 +33,7 @@
 body {
     margin: 0;
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
 }
 
 a {
@@ -41,6 +41,16 @@ a {
     text-decoration: none;
     color: black;
     font-size: 12pt;
+    word-spacing: -2.5px;
+}
+del {
+    color: lightgray;
+}
+.KR {
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 700;
+    word-spacing: 0px;
+    letter-spacing: 0px;
 }
 
 ul {
@@ -49,11 +59,13 @@ ul {
     padding: 0;
 }
 
-.title a {
-    font-size: 12pt;
+.title {
     position: fixed;
     left: 10px;
     top: 10px;
+}
+.title a {
+    font-size: 12pt;
 }
 
 .info {
@@ -64,6 +76,7 @@ ul {
 
 .info a {
     letter-spacing: -0.5px;
+    text-shadow: 0 0 10px white;
 }
 
 .mail::after {
@@ -89,22 +102,121 @@ ul {
 
 .copyright {
     text-align: center;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .copyright a {
     font-size: 9pt;
     color: darkgray;
     word-spacing: -2px;
-    position: fixed;
-    bottom: 11px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
-@media (max-width: 768px) {
-    .copyright a {
-    right: 11px;
-    left: auto;
-    transform: translateX(0%);
+
+.background {
+    display: grid;
+    width: calc(100vw - 140px);
+    height: fit-content;
+    margin: 70px 70px 0 70px;
+    grid-template-columns: repeat(auto-fill, 250px);
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+.contents {
+    display: grid;
+    width: fit-content;
+    max-width: 250px;
+    height: fit-content;
+}
+.contents_date a {
+    color: lightgrey;
+}
+.contents_date a:hover {
+    color: lightcoral;
+}
+.contents_title {
+    padding: 0 0 3px 0;
+}
+.contents_thumbnail {
+    width: fit-content;
+    max-width: 250px;
+    height: 250px;
+}
+.contents_thumbnail a {
+    width: 250px;
+    height: fit-content;
+}
+.contents_thumbnail img {
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    object-position: top;
+    object-position: left;
+}
+
+@media (max-width: 500px) {
+    .title {
+        left: 0;
+        top: 0;
+        padding: 10px 0 10px 10px;
+        width: 100vw;
+        background-color: white;
+    }
+
+    .info a {
+        font-size: 10pt;
+    }
+    
+    .copyright {
+        right: 10px;
+        left: auto;
+        transform: translateX(0%);
+    }
+
+    .background {
+        display: grid;
+        width: calc(100vw - 40px);
+        height: fit-content;
+        margin: 50px 20px 100px 20px;
+        grid-template-columns: repeat(auto-fill, calc(100vw - 40px));
+        row-gap: 20px;
+        column-gap: 30px;
+    }
+    
+    .contents {
+        display: grid;
+        width: 100%;
+        max-width: none;
+        height: fit-content;
+    }
+    .contents_date a {
+        color: lightgrey;
+    }
+    .contents_date a:hover {
+        color: lightcoral;
+    }
+    .contents_title {
+        padding: 0 0 3px 0;
+    }
+    .contents_thumbnail {
+        width: fit-content;
+        max-width: none;
+        height: fit-content;
+    }
+    .contents_thumbnail a {
+        width: 100%;
+        height: fit-content;
+    }
+    .contents_thumbnail img {
+        width: 100%;
+        height: auto;
+        max-width: none;
+        max-height: none;
+        object-fit: contain;
+        object-position: top;
+        object-position: left;
     }
 }

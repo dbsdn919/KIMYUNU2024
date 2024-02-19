@@ -1,0 +1,163 @@
+.contents_window {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100vw;
+    min-height: 99vh;
+    height: fit-content;
+}
+
+.contents_window_img {
+    width: 50vw;
+    height: fit-content;
+    padding: 40px 0 50px 0;
+}
+.contents_window_img img {
+    margin: 0 2.5% 50px 5%;
+    width: 92.5%;
+    height: auto;
+}
+
+.contents_window_text {
+    display: grid;
+    grid-template-rows: auto;
+    width: calc(50% - 3.75%);
+    height: fit-content;
+    position: fixed;
+    left: 50vw;
+    top: 40px;
+    margin: 0 2.5% 0 1.25%;
+}
+.contents_window_date a {
+    color: lightgrey;
+}
+.contents_window_caption {
+    margin: 5px 0 0 0;
+    padding: 7px 0 0 0;
+    border-top: 1px solid black;
+}
+.contents_window_caption_KR {
+    margin: 7px 0 0 0;
+}
+
+.PREV_NEXT {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.SONYEJIN_NEXT::after {
+    content: "NEXT";
+}
+.SONYEJIN_NEXT:hover::after {
+    content: "BAEKJA >>";
+}
+
+.BAEKJA_PREV::after {
+    content: "PREV";
+}
+.BAEKJA_PREV:hover::after {
+    content: "<< SON YEJIN";
+}
+.BAEKJA_NEXT::after {
+    content: "NEXT";
+}
+.BAEKJA_NEXT:hover::after {
+    content: "SCULPTURE >>";
+}
+
+.SCULPTURE_PREV::after {
+    content: "PREV";
+}
+.SCULPTURE_PREV:hover::after {
+    content: "<< BAEKJA";
+}
+.SCULPTURE_NEXT::after {
+    content: "NEXT";
+}
+.SCULPTURE_NEXT:hover::after {
+    content: "ANTIHERO >>";
+}
+
+.ANTIHERO_PREV::after {
+    content: "PREV";
+}
+.ANTIHERO_PREV:hover::after {
+    content: "<< SCULPTURE";
+}
+.ANTIHERO_NEXT::after {
+    content: "NEXT";
+}
+.ANTIHERO_NEXT:hover::after {
+    content: "FIND MY >>";
+}
+
+.FINDMY_PREV::after {
+    content: "PREV";
+}
+.FINDMY_PREV:hover::after {
+    content: "<< ANTIHERO";
+}
+.FINDMY_NEXT::after {
+    content: "NEXT";
+}
+.FINDMY_NEXT:hover::after {
+    content: "BYREDO >>";
+}
+
+.BYREDO_PREV::after {
+    content: "PREV";
+}
+.BYREDO_PREV:hover::after {
+    content: "<< FIND MY";
+}
+
+@media (max-width: 500px) {
+    .contents_window {
+        display: grid;
+        grid-template-columns: none;
+        width: 100vw;
+        min-height: 99vh;
+        height: fit-content;
+    }
+    .contents_window_img:nth-child(1) { order: 2; }
+    .contents_window_text:nth-child(2) { order: 1; }
+
+    .contents_window_img {
+        width: 100vw;
+        height: fit-content;
+        padding: 40px 0 50px 0;
+    }
+    .contents_window_img img {
+        margin: 0 5% 50px 5%;
+        width: 90%;
+        height: auto;
+    }
+    
+    .contents_window_text {
+        display: grid;
+        grid-template-rows: auto;
+        width: 90vw;
+        height: fit-content;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 50px 5vw 0 5vw;
+    }
+    .contents_window_date a {
+        color: lightgrey;
+    }
+    .contents_window_caption {
+        margin: 5px 0 0 0;
+        padding: 7px 0 0 0;
+        border-top: 1px solid black;
+    }
+    .contents_window_caption_KR {
+        margin: 7px 0 0 0;
+    }
+    
+    .PREV_NEXT {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+}
