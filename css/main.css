@@ -28,7 +28,9 @@
     font-style: normal;
 }
 
-
+html {
+    cursor: crosshair;
+}
 
 body {
     margin: 0;
@@ -42,6 +44,7 @@ a {
     color: black;
     font-size: 12pt;
     word-spacing: -2.5px;
+    cursor: crosshair;
 }
 del {
     color: lightgray;
@@ -63,7 +66,6 @@ ul {
     position: fixed;
     left: 10px;
     top: 10px;
-    transform: translateY(-3.5px);
 }
 .title a {
     font-size: 12pt;
@@ -76,7 +78,7 @@ ul {
 
 .info {
     position: fixed;
-    bottom: 10px;
+    bottom: 25px;
     left: 10px;
 }
 
@@ -140,9 +142,6 @@ ul {
 .contents_date a {
     color: lightgrey;
 }
-.contents_date a:hover {
-    color: #c49a6c;
-}
 .contents_title {
     padding: 0 0 3px 0;
 }
@@ -163,7 +162,7 @@ ul {
     object-position: left;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .title {
         left: 0;
         top: 0;

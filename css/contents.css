@@ -111,7 +111,9 @@
     content: "<< FIND MY";
 }
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 768px) {
     .contents_window {
         display: grid;
         grid-template-columns: none;
