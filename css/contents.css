@@ -36,6 +36,10 @@
     border-top: 1px solid black;
     line-height: 22px;
 }
+.ig_tag {
+    color: deepskyblue;
+    text-decoration: underline;
+}
 
 .PREV_NEXT {
     position: fixed;
@@ -112,8 +116,132 @@
 }
 
 
+@media (hover: hover) {
+    .SONYEJIN_NEXT::after {
+        content: "NEXT";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .SONYEJIN_NEXT:hover::after {
+        content: "BAEKJA >>";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    
+    .BAEKJA_PREV::after {
+        content: "PREV";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .BAEKJA_PREV:hover::after {
+        content: "<< SON YEJIN";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    .BAEKJA_NEXT::after {
+        content: "NEXT";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .BAEKJA_NEXT:hover::after {
+        content: "SCULPTURE >>";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    
+    .SCULPTURE_PREV::after {
+        content: "PREV";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .SCULPTURE_PREV:hover::after {
+        content: "<< BAEKJA";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    .SCULPTURE_NEXT::after {
+        content: "NEXT";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .SCULPTURE_NEXT:hover::after {
+        content: "ANTIHERO >>";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    
+    .ANTIHERO_PREV::after {
+        content: "PREV";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .ANTIHERO_PREV:hover::after {
+        content: "<< SCULPTURE";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    .ANTIHERO_NEXT::after {
+        content: "NEXT";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .ANTIHERO_NEXT:hover::after {
+        content: "FIND MY >>";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    
+    .FINDMY_PREV::after {
+        content: "PREV";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .FINDMY_PREV:hover::after {
+        content: "<< ANTIHERO";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    .FINDMY_NEXT::after {
+        content: "NEXT";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .FINDMY_NEXT:hover::after {
+        content: "BYREDO >>";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    
+    .BYREDO_PREV::after {
+        content: "PREV";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .BYREDO_PREV:hover::after {
+        content: "<< FIND MY";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
 
-@media (max-width: 768px) {
+    @keyframes fadeOut {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
     .contents_window {
         display: grid;
         grid-template-columns: none;

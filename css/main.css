@@ -113,6 +113,25 @@ ul {
     content: "Seoul,Deagu";
 }
 
+@keyframes fadeOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
 .copyright {
     text-align: center;
     position: fixed;
@@ -173,7 +192,59 @@ ul {
     cursor: default;
 }
 
-@media (max-width: 768px) {
+@media (hover: hover) {
+    .mail::after {
+        content: "Mail";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .mail:hover::after {
+        content: "> Mail";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    
+    .instagram::after {
+        content: "Instagram";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .instagram:hover::after {
+        content: "> Instagram";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    
+    .location::after {
+        content: "Located in Korea.";
+        opacity: 1;
+        animation: fadeIn 1s backwards;
+    }
+    .location:hover::after {
+        content: "Seoul,Deagu";
+        opacity: 0;
+        animation: fadeOut 1s forwards;
+    }
+    
+    @keyframes fadeOut {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
     .title {
         left: 0;
         top: -1px;
