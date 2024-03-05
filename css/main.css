@@ -28,6 +28,16 @@
     font-style: normal;
 }
 
+:root {
+    --background-color: white;
+    --text-color: black;
+    --nonselect-color: gray;
+}
+
+html {
+    background-color: var(--background-color);
+}
+
 body {
     margin: 0;
     width: 100vw;
@@ -37,13 +47,13 @@ body {
 a {
     font-family: "Fragment Mono", monospace;
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     font-size: 12pt;
     word-spacing: -2.5px;
     word-break: keep-all;
 }
 del {
-    color: lightgray;
+    color: var(--nonselect-color);
 }
 .KR {
     font-family: "Nanum Myeongjo", serif;
@@ -125,7 +135,7 @@ ul {
 
 .copyright a {
     font-size: 9pt;
-    color: darkgray;
+    color: var(--nonselect-color);
     word-spacing: -2px;
 }
 
@@ -147,7 +157,7 @@ ul {
     height: fit-content;
 }
 .contents_date a {
-    color: lightgrey;
+    color: var(--nonselect-color);
     cursor: default;
 }
 .contents_title {
@@ -174,13 +184,13 @@ ul {
     cursor: default;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .title {
         left: 0;
         top: -1px;
         padding: 10px 0 10px 10px;
         width: 100vw;
-        background-color: white;
+        background-color: var(--background-color);
     }
 
     .info {
@@ -237,10 +247,7 @@ ul {
         height: fit-content;
     }
     .contents_date a {
-        color: lightgrey;
-    }
-    .contents_date a:hover {
-        color: lightcoral;
+        color: var(--nonselect-color);
     }
     .contents_title {
         padding: 0 0 3px 0;
