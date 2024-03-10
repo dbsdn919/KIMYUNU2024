@@ -2,6 +2,8 @@
     --background-color: white;
     --text-color: black;
     --nonselect-color: gray;
+    --1st-point-color: magenta;
+    --2nd-point-color: #1ed760;
 }
 
 .contents_window {
@@ -41,6 +43,20 @@
     padding: 5px 0 0 0;
     border-top: 1px solid black;
     line-height: 22px;
+}
+
+.extnl_link {
+    display: block;
+}
+.music_link {
+    text-decoration: underline;
+    color: var(--2nd-point-color);
+    font-style: italic;
+}
+.web_link {
+    text-decoration: underline;
+    color: var(--1st-point-color);
+    font-style: italic;
 }
 
 .spotify_player {
