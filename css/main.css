@@ -139,7 +139,6 @@ ul {
     word-spacing: -2px;
 }
 
-
 .background {
     display: grid;
     width: calc(100vw - 140px);
@@ -269,5 +268,11 @@ ul {
         object-fit: contain;
         object-position: top;
         object-position: left;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .copyright {
+        display: none;
     }
 }
