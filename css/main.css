@@ -124,7 +124,7 @@ ul {
     content: "Seoul,Deagu";
 }
 
-.copyright {
+.watermark {
     text-align: center;
     position: fixed;
     bottom: 10px;
@@ -133,7 +133,7 @@ ul {
     z-index: 999;
 }
 
-.copyright a {
+.watermark a {
     font-size: 9pt;
     color: var(--nonselect-color);
     word-spacing: -2px;
@@ -272,7 +272,7 @@ ul {
 }
 
 @media screen and (max-width: 500px) {
-    .copyright {
-        display: none;
+    .watermark {
+        /*display: none;*/
     }
 }
